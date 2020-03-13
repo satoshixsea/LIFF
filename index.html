@@ -32,6 +32,8 @@ liff
         // set `redirectUri` to redirect the user to a URL other than the front page of your LIFF app.
         var accessToken = liff.getAccessToken();
         console.log(accessToken)
+        const idToken = liff.getDecodedIDToken();
+        console.log(idToken) // print decoded idToken object
     } else {
         console.log("ログインしよう")
         liff.login();
