@@ -24,6 +24,8 @@ liff
       console.log(liff.getVersion())
       console.log(liff.isInClient())
       console.log(liff.isLoggedIn())
+      const idToken = liff.getDecodedIDToken();
+      console.log(idToken) // print decoded idToken object
       
       
 // login call, only when external browser is used
@@ -32,8 +34,6 @@ liff
         // set `redirectUri` to redirect the user to a URL other than the front page of your LIFF app.
         var accessToken = liff.getAccessToken();
         console.log(accessToken)
-        const idToken = liff.getDecodedIDToken();
-        console.log(idToken) // print decoded idToken object
     } else {
         console.log("ログインしよう")
         liff.login();
