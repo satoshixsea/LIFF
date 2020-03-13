@@ -24,7 +24,13 @@ liff
       const versinon = liff.getVersion();
       const client = liff.isInClient();
       const loggedIn = liff.isLoggedIn();
+      console.log(liff.getOS())
+      console.log(liff.getLanguage())
+      console.log(liff.getVersion())
+      console.log(liff.isInClient())
+      console.log(liff.isLoggedIn())
       const idToken = liff.getDecodedIDToken();
+      console.log(idToken)
       alert([os, langage, versinon, client, loggedIn, idToken])
       
       
