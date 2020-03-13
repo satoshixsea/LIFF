@@ -29,7 +29,7 @@ liff
       console.log(versinon)
       console.log(client)
       console.log(loggedIn)
-      const idToken = liff.getDecodedIDToken();
+      const idToken = JSON.stringify(liff.getDecodedIDToken());
       console.log(idToken)
       alert([os, langage, versinon, client, loggedIn, idToken])
       
