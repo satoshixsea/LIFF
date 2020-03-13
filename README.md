@@ -1,3 +1,3 @@
-# webapp
+# LIFF webapp
 web application test
-https://satoshixsea.github.io/webapp/
+https://satoshixsea.github.io/LIFF/
