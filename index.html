@@ -89,11 +89,16 @@ elem("sendMessageToTarget").onclick = sendToSelectedTarget;
     
 function sendToSelectedTarget() {
   liff.shareTargetPicker([
-    {
-      type: "text",
-      text: "Hello, World!"
-    }
-  ]);
+  {
+    type: "text",
+    text: "Hello, World!"
+  }
+])
+  .then(
+    alert("ShareTargetPicker was launched")
+  ).catch(function(res) {
+    alert("Failed to launch ShareTargetPicker" + res)
+  })
   liff.closeWindow();
 }
         </script>
