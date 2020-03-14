@@ -33,7 +33,7 @@ liff
       const client = liff.isInClient();
       const loggedIn = liff.isLoggedIn();
       const context = liff.getContext();
-      const friendship = liff.getFriendship();
+//       const friendship = liff.getFriendship();
       const idToken = JSON.stringify(liff.getDecodedIDToken(), null, 2);
 //       const profile = JSON.stringify(liff.getProfile(), null, 2);
 //       if (liff.scanCode) {
@@ -41,7 +41,7 @@ liff
 //           // result = { value: '' }
 //       });
       //alert([os, langage, versinon, client, loggedIn, idToken])
-      elem("ta").value = [os, langage, versinon, client, loggedIn, context, friendship, idToken].join("\n");
+      elem("ta").value = [os, langage, versinon, client, loggedIn, context, idToken].join("\n");
         
 //       liff.openWindow({
 //         url: "https://line.me",
