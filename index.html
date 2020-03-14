@@ -31,6 +31,10 @@ liff
       console.log(loggedIn)
       const idToken = JSON.stringify(liff.getDecodedIDToken());
       console.log(idToken)
+      if (liff.scanCode) {
+        liff.scanCode().then(result => {
+          // result = { value: '' }
+      });
       alert([os, langage, versinon, client, loggedIn, idToken])
       liff.sendMessages([
             {
@@ -48,12 +52,6 @@ liff
       liff.openWindow({
         url: "https://line.me",
         external: true
-      });
-      
-        
-      if (liff.scanCode) {
-        liff.scanCode().then(result => {
-          // result = { value: '' }
       });
 }
       
