@@ -8,7 +8,9 @@
         <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
         <script src="liff-starter.js"></script>
   <body>
+      <textarea id="ta"></textarea>
       <button id="sendMessage">send</button>
+      
 <script>
 function elem(id) {
   return document.getElementById(id);
@@ -27,18 +29,13 @@ liff
       const versinon = liff.getVersion();
       const client = liff.isInClient();
       const loggedIn = liff.isLoggedIn();
-      console.log(os)
-      console.log(langage)
-      console.log(versinon)
-      console.log(client)
-      console.log(loggedIn)
       const idToken = JSON.stringify(liff.getDecodedIDToken());
-      console.log(idToken)
 //       if (liff.scanCode) {
 //         liff.scanCode().then(result => {
 //           // result = { value: '' }
 //       });
-      alert([os, langage, versinon, client, loggedIn, idToken])
+      //alert([os, langage, versinon, client, loggedIn, idToken])
+      elem("ta").value = [os, langage, versinon, client, loggedIn, idToken];
         
 //       liff.openWindow({
 //         url: "https://line.me",
