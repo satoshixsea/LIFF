@@ -10,6 +10,8 @@
   <body>
       <textarea id="ta"></textarea>
       <button id="sendMessage">send</button>
+      <button id="sendMessageToTarget">sendToTarget</button>
+      
       
 <script>
 function elem(id) {
@@ -29,13 +31,15 @@ liff
       const versinon = liff.getVersion();
       const client = liff.isInClient();
       const loggedIn = liff.isLoggedIn();
+      const context = liff.getContext();
+      const friendship = liff.getFriendship();
       const idToken = JSON.stringify(liff.getDecodedIDToken(), null, 2);
 //       if (liff.scanCode) {
 //         liff.scanCode().then(result => {
 //           // result = { value: '' }
 //       });
       //alert([os, langage, versinon, client, loggedIn, idToken])
-      elem("ta").value = [os, langage, versinon, client, loggedIn, idToken].join("\n");
+      elem("ta").value = [os, langage, versinon, client, loggedIn, context, idToken].join("\n");
         
 //       liff.openWindow({
 //         url: "https://line.me",
@@ -79,6 +83,18 @@ function sendClicked() {
           console.log('error', err);
       });
     liff.closeWindow();
+}
+
+elem("sendMessageToTarget").onclick = sendToSelectedTarget;
+    
+function sendToSelectedTarget() {
+  liff.shareTargetPicker([
+    {
+      type: "text",
+      text: "Hello, World!"
+    }
+  ]);
+  liff.closeWindow();
 }
         </script>
   </body>
