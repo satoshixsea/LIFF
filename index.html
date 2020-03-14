@@ -13,24 +13,6 @@
 function elem(id) {
   return document.getElementById(id);
 }
-
-elem("sendMessage").onclick = sendClicked;
-
-function sendClicked() {
-    liff.sendMessages([
-            {
-              type:'text',
-              text:'Hello, World!'
-            }
-          ])
-          .then(() => {
-            console.log('message sent');
-          })
-        .catch((err) => {
-          console.log('error', err);
-      });
-    liff.closeWindow();
-}
     
 liff
   .init({
@@ -83,6 +65,24 @@ liff
 
 // コールバックを使用する方法
 //liff.init({ liffId: "1653945990-wym9pAjJ" }, successCallback, errorCallback);
+    
+elem("sendMessage").onclick = sendClicked;
+
+function sendClicked() {
+    liff.sendMessages([
+            {
+              type:'text',
+              text:'Hello, World!'
+            }
+          ])
+          .then(() => {
+            console.log('message sent');
+          })
+        .catch((err) => {
+          console.log('error', err);
+      });
+    liff.closeWindow();
+}
         </script>
   </body>
 </html>
