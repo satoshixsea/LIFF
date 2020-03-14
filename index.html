@@ -50,6 +50,12 @@ liff
         external: true
       });
       
+        
+      if (liff.scanCode) {
+        liff.scanCode().then(result => {
+          // result = { value: '' }
+      });
+}
       
 // login call, only when external browser is used
 
