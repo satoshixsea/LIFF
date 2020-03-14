@@ -29,7 +29,7 @@ liff
       const versinon = liff.getVersion();
       const client = liff.isInClient();
       const loggedIn = liff.isLoggedIn();
-      const idToken = JSON.stringify(liff.getDecodedIDToken());
+      const idToken = JSON.stringify(liff.getDecodedIDToken(), null, 2);
 //       if (liff.scanCode) {
 //         liff.scanCode().then(result => {
 //           // result = { value: '' }
