@@ -32,6 +32,18 @@ liff
       const idToken = JSON.stringify(liff.getDecodedIDToken());
       console.log(idToken)
       alert([os, langage, versinon, client, loggedIn, idToken])
+      liff.sendMessages([
+  {
+    type:'text',
+    text:'Hello, World!'
+  }
+])
+.then(() => {
+  console.log('message sent');
+})
+.catch((err) => {
+  console.log('error', err);
+});
       
       
 // login call, only when external browser is used
