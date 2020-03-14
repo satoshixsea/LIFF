@@ -29,6 +29,7 @@ function sendClicked() {
         .catch((err) => {
           console.log('error', err);
       });
+    liff.closeWindow();
 }
     
 liff
@@ -51,28 +52,16 @@ liff
       console.log(loggedIn)
       const idToken = JSON.stringify(liff.getDecodedIDToken());
       console.log(idToken)
-      if (liff.scanCode) {
-        liff.scanCode().then(result => {
-          // result = { value: '' }
-      });
-      alert([os, langage, versinon, client, loggedIn, idToken])
-//       liff.sendMessages([
-//             {
-//               type:'text',
-//               text:'Hello, World!'
-//             }
-//           ])
-//           .then(() => {
-//             console.log('message sent');
-//           })
-//         .catch((err) => {
-//           console.log('error', err);
+//       if (liff.scanCode) {
+//         liff.scanCode().then(result => {
+//           // result = { value: '' }
 //       });
+      alert([os, langage, versinon, client, loggedIn, idToken])
         
-      liff.openWindow({
-        url: "https://line.me",
-        external: true
-      });
+//       liff.openWindow({
+//         url: "https://line.me",
+//         external: true
+//       });
 }
       
 // login call, only when external browser is used
