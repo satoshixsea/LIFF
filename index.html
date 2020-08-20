@@ -90,6 +90,7 @@ function sendClicked() {
 elem("sendMessageToTarget").onclick = sendToSelectedTarget;
     
 function sendToSelectedTarget() {
+  var text = elem("ta").value;
   liff.shareTargetPicker([
   {
     type: "text",
