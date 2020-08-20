@@ -72,10 +72,11 @@ liff
 elem("sendMessage").onclick = sendClicked;
 
 function sendClicked() {
+    var text = elem("ta").value;
     liff.sendMessages([
             {
               type:'text',
-              text:'Hello, World!'
+              text: text;// 'Hello, World!'
             }
           ])
           .then(() => {
@@ -90,7 +91,6 @@ function sendClicked() {
 elem("sendMessageToTarget").onclick = sendToSelectedTarget;
     
 function sendToSelectedTarget() {
-  var text = elem("ta").value;
   liff.shareTargetPicker([
   {
     type: "text",
